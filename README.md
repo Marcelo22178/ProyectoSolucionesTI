@@ -1,2 +1,2 @@
-# ProyectoSolucionesTI
+# ProyectoMivTi
 Proyecto de prueba
