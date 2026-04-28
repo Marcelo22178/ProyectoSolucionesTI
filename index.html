@@ -1200,6 +1200,279 @@
       box-shadow: 0 10px 30px rgba(108, 99, 255, 0.6);
     }
 
+    /* ─────────── CONSULTING ─────────── */
+    #consulting {
+      background: var(--dark);
+    }
+
+    .consulting-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 24px;
+    }
+
+    .consulting-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 34px 28px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+      cursor: default;
+    }
+
+    .consulting-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--secondary), #8b7fff);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s;
+    }
+
+    .consulting-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(6, 182, 212, 0.4);
+      box-shadow: 0 8px 40px rgba(6, 182, 212, 0.2);
+    }
+
+    .consulting-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .consulting-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      color: #fff;
+      margin-bottom: 22px;
+      transition: transform 0.3s;
+    }
+
+    .consulting-card:hover .consulting-icon {
+      transform: rotate(8deg) scale(1.1);
+    }
+
+    .consulting-title {
+      font-family: var(--heading);
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .consulting-desc {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    .consulting-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .consulting-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .consulting-list li i {
+      color: var(--secondary);
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    .consulting-note {
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.08), rgba(139, 127, 255, 0.08));
+      border: 1px solid rgba(6, 182, 212, 0.2);
+      border-radius: var(--radius);
+      padding: 22px 28px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-top: 48px;
+    }
+
+    .consulting-note .icon {
+      font-size: 2.2rem;
+      flex-shrink: 0;
+    }
+
+    .consulting-note h4 {
+      font-family: var(--heading);
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .consulting-note p {
+      color: var(--muted);
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
+
+    /* ─────────── GAMING HOSTING ─────────── */
+    #gaming {
+      background: var(--dark2);
+    }
+
+    .gaming-offer-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 20px;
+      background: linear-gradient(135deg, rgba(255, 170, 30, 0.18), rgba(255, 90, 40, 0.12));
+      border: 1px solid rgba(255, 170, 30, 0.4);
+      border-radius: 50px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #ffc533;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .gaming-offer-badge i {
+      color: #ffc533;
+    }
+
+    .gaming-games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+      margin-bottom: 48px;
+    }
+
+    .gaming-game-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+      cursor: default;
+    }
+
+    .gaming-game-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #ffc533, #ff5a28);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s;
+    }
+
+    .gaming-game-card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(255, 197, 51, 0.4);
+      box-shadow: 0 8px 40px rgba(255, 170, 30, 0.2);
+    }
+
+    .gaming-game-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .gaming-game-icon {
+      font-size: 2.4rem;
+      margin-bottom: 14px;
+    }
+
+    .gaming-game-title {
+      font-family: var(--heading);
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .gaming-game-desc {
+      color: var(--muted);
+      font-size: 0.85rem;
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+
+    .gaming-game-includes {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-bottom: 16px;
+    }
+
+    .gaming-game-includes li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .gaming-game-includes li i {
+      color: #ffc533;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    .gaming-price-tag {
+      display: inline-block;
+      padding: 5px 14px;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, rgba(255, 197, 51, 0.15), rgba(255, 90, 40, 0.1));
+      color: #ffc533;
+      border: 1px solid rgba(255, 197, 51, 0.3);
+    }
+
+    .gaming-disclaimer {
+      background: linear-gradient(135deg, rgba(255, 170, 30, 0.07), rgba(255, 90, 40, 0.05));
+      border: 1px solid rgba(255, 170, 30, 0.18);
+      border-radius: var(--radius);
+      padding: 22px 28px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .gaming-disclaimer .icon {
+      font-size: 2rem;
+      flex-shrink: 0;
+    }
+
+    .gaming-disclaimer h4 {
+      font-family: var(--heading);
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: #ffc533;
+    }
+
+    .gaming-disclaimer p {
+      color: var(--muted);
+      font-size: 0.83rem;
+      line-height: 1.6;
+    }
+
     /* ─────────── KEYFRAMES GLOBALS ─────────── */
     @keyframes fadeInDown {
       from {
@@ -1295,6 +1568,8 @@
     <img src="assets/MIVLogo3.png" alt="MIVTI" class="nav-logo">
     <ul class="nav-links">
       <li><a href="#services">Servicios</a></li>
+      <li><a href="#consulting">Consultoría</a></li>
+      <li><a href="#gaming">Gaming</a></li>
       <li><a href="#pricing">Cotización</a></li>
       <li><a href="#tech">Tecnologías</a></li>
       <li><a href="#team">Equipo</a></li>
@@ -1410,6 +1685,22 @@
         <span class="service-badge badge-green"><i class="fas fa-gift"></i> 1 mes gratis</span>
       </div>
 
+      <div class="service-card reveal" style="transition-delay:.6s">
+        <div class="service-icon" style="background:linear-gradient(135deg,#06b6d4,#8b7fff)"><i
+            class="fas fa-user-tie"></i></div>
+        <h3 class="service-title">Consultoría Técnica</h3>
+        <p class="service-desc">Testing, optimización de código y SQL, detección y corrección de errores, y análisis básico de ciberseguridad para que tu sistema funcione de forma óptima y segura.</p>
+        <a href="#consulting" class="service-badge badge-purple" style="text-decoration:none;cursor:pointer;">Ver detalles →</a>
+      </div>
+
+      <div class="service-card reveal" style="transition-delay:.7s">
+        <div class="service-icon" style="background:linear-gradient(135deg,#ffc533,#ff5a28)"><i
+            class="fas fa-gamepad"></i></div>
+        <h3 class="service-title">Hosting & Servidores de Juegos</h3>
+        <p class="service-desc">Configuración y hosting de servidores de juegos a medida. Lo que se entrega y el costo varía según el juego. ¡Disponible como oferta especial por tiempo limitado!</p>
+        <a href="#gaming" class="service-badge" style="background:rgba(255,197,51,0.12);color:#ffc533;border:1px solid rgba(255,197,51,0.3);text-decoration:none;cursor:pointer;">Ver juegos →</a>
+      </div>
+
     </div>
 
     <div class="maintenance-banner reveal" style="transition-delay:.6s">
@@ -1418,6 +1709,161 @@
         <h4>1 mes de mantenimiento gratuito incluidos en cada proyecto</h4>
         <p>Después del lanzamiento te acompañamos sin costo: correcciones de bugs, actualizaciones menores y soporte
           técnico. Luego continúa con planes de soporte a medida, transparentes y sin sorpresas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONSULTING -->
+  <section id="consulting">
+    <div class="section-header reveal">
+      <span class="section-label">Consultoría Técnica</span>
+      <h2 class="section-title">Optimizamos y diagnosticamos<br>tu sistema existente</h2>
+      <p class="section-sub">Analizamos tu proyecto, encontramos cuellos de botella, errores y vulnerabilidades para que tu software corra con la mayor calidad y seguridad posible.</p>
+    </div>
+
+    <div class="consulting-grid">
+
+      <div class="consulting-card reveal" style="transition-delay:.0s">
+        <div class="consulting-icon" style="background:linear-gradient(135deg,#43e97b,#38f9d7)">
+          <i class="fas fa-vial"></i>
+        </div>
+        <h3 class="consulting-title">Testing & Pruebas de Rendimiento</h3>
+        <p class="consulting-desc">Diseñamos y ejecutamos baterías de pruebas para garantizar la calidad y estabilidad de tu aplicación bajo condiciones reales.</p>
+        <ul class="consulting-list">
+          <li><i class="fas fa-check"></i> Pruebas unitarias e integración</li>
+          <li><i class="fas fa-check"></i> Pruebas end-to-end (E2E)</li>
+          <li><i class="fas fa-check"></i> Pruebas de carga y estrés</li>
+          <li><i class="fas fa-check"></i> Análisis de tiempos de respuesta y throughput</li>
+          <li><i class="fas fa-check"></i> Reporte detallado con hallazgos y recomendaciones</li>
+        </ul>
+      </div>
+
+      <div class="consulting-card reveal" style="transition-delay:.1s">
+        <div class="consulting-icon" style="background:linear-gradient(135deg,#f093fb,#a18cd1)">
+          <i class="fas fa-tachometer-alt"></i>
+        </div>
+        <h3 class="consulting-title">Optimización de Código & SQL</h3>
+        <p class="consulting-desc">Revisamos tu base de código y consultas SQL para eliminar ineficiencias, reducir tiempos de respuesta y mejorar la escalabilidad.</p>
+        <ul class="consulting-list">
+          <li><i class="fas fa-check"></i> Revisión y refactorización de código</li>
+          <li><i class="fas fa-check"></i> Análisis y optimización de consultas SQL</li>
+          <li><i class="fas fa-check"></i> Indexación y estructura de base de datos</li>
+          <li><i class="fas fa-check"></i> Reducción de llamadas innecesarias a la BD</li>
+          <li><i class="fas fa-check"></i> Perfilado (profiling) de funciones críticas</li>
+        </ul>
+      </div>
+
+      <div class="consulting-card reveal" style="transition-delay:.2s">
+        <div class="consulting-icon" style="background:linear-gradient(135deg,#f7971e,#ffd200)">
+          <i class="fas fa-bug"></i>
+        </div>
+        <h3 class="consulting-title">Búsqueda & Fix de Errores</h3>
+        <p class="consulting-desc">Identificamos y resolvemos bugs de complejidad básica e intermedia que afectan el funcionamiento o la experiencia de usuario de tu sistema.</p>
+        <ul class="consulting-list">
+          <li><i class="fas fa-check"></i> Diagnóstico de errores en frontend y backend</li>
+          <li><i class="fas fa-check"></i> Corrección de bugs básicos e intermedios</li>
+          <li><i class="fas fa-check"></i> Revisión de logs y trazas de error</li>
+          <li><i class="fas fa-check"></i> Análisis de comportamiento inesperado en flujos</li>
+          <li><i class="fas fa-check"></i> Documentación de las causas y soluciones aplicadas</li>
+        </ul>
+      </div>
+
+      <div class="consulting-card reveal" style="transition-delay:.3s">
+        <div class="consulting-icon" style="background:linear-gradient(135deg,#ff6584,#f5576c)">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3 class="consulting-title">Análisis de Ciberseguridad Básico</h3>
+        <p class="consulting-desc">Evaluamos tu aplicación en busca de vulnerabilidades comunes, aplicando las guías OWASP para reducir la superficie de ataque.</p>
+        <ul class="consulting-list">
+          <li><i class="fas fa-check"></i> Revisión de vulnerabilidades OWASP Top 10</li>
+          <li><i class="fas fa-check"></i> Detección de inyecciones SQL y XSS básicas</li>
+          <li><i class="fas fa-check"></i> Revisión de autenticación y manejo de sesiones</li>
+          <li><i class="fas fa-check"></i> Análisis de exposición de datos sensibles</li>
+          <li><i class="fas fa-check"></i> Informe de hallazgos con nivel de riesgo y recomendaciones</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="consulting-note reveal" style="transition-delay:.4s">
+      <div class="icon">💡</div>
+      <div>
+        <h4>¿Tienes un sistema existente que necesita revisión?</h4>
+        <p>Nuestros servicios de consultoría son independientes del desarrollo. Puedes contratar solo el diagnóstico, la optimización o la auditoría de seguridad sin necesidad de un proyecto de desarrollo completo. Contáctanos y evaluamos tu caso sin costo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAMING HOSTING -->
+  <section id="gaming">
+    <div class="section-header reveal">
+      <div class="gaming-offer-badge"><i class="fas fa-bolt"></i> Oferta especial por tiempo limitado</div>
+      <span class="section-label">Hosting & Servidores de Juegos</span>
+      <h2 class="section-title">Tu propio servidor gamer,<br>configurado y listo para jugar</h2>
+      <p class="section-sub">Montamos y configuramos servidores de juegos según el título que elijas. El precio y lo que incluye varía según el juego — consúltanos y te armamos un paquete a tu medida.</p>
+    </div>
+
+    <div class="gaming-games-grid">
+
+      <div class="gaming-game-card reveal" style="transition-delay:.0s">
+        <div class="gaming-game-icon">⛏️</div>
+        <h3 class="gaming-game-title">Minecraft (Java / Bedrock)</h3>
+        <p class="gaming-game-desc">Servidor dedicado con mods, plugins y mundos personalizados según lo que necesite tu comunidad.</p>
+        <ul class="gaming-game-includes">
+          <li><i class="fas fa-check"></i> Instalación y configuración completa del servidor</li>
+          <li><i class="fas fa-check"></i> Instalación de mods o plugins a elección</li>
+          <li><i class="fas fa-check"></i> Panel de administración web (si aplica)</li>
+          <li><i class="fas fa-check"></i> Backups automáticos configurados</li>
+        </ul>
+        <span class="gaming-price-tag">💬 Precio según configuración</span>
+      </div>
+
+      <div class="gaming-game-card reveal" style="transition-delay:.1s">
+        <div class="gaming-game-icon">🧟</div>
+        <h3 class="gaming-game-title">Project Zomboid</h3>
+        <p class="gaming-game-desc">Servidor persistente con configuración de dificultad, mods de Steam Workshop y gestión de usuarios.</p>
+        <ul class="gaming-game-includes">
+          <li><i class="fas fa-check"></i> Servidor dedicado con Steam CMD</li>
+          <li><i class="fas fa-check"></i> Configuración de mods vía Workshop</li>
+          <li><i class="fas fa-check"></i> Ajuste de parámetros del mundo y dificultad</li>
+          <li><i class="fas fa-check"></i> Whitelist / control de acceso</li>
+        </ul>
+        <span class="gaming-price-tag">💬 Precio según configuración</span>
+      </div>
+
+      <div class="gaming-game-card reveal" style="transition-delay:.2s">
+        <div class="gaming-game-icon">🌴</div>
+        <h3 class="gaming-game-title">Valheim</h3>
+        <p class="gaming-game-desc">Mundo persistente siempre disponible para tu grupo, con backups del mundo y fácil gestión de accesos.</p>
+        <ul class="gaming-game-includes">
+          <li><i class="fas fa-check"></i> Servidor dedicado con SteamCMD</li>
+          <li><i class="fas fa-check"></i> Contraseña y control de acceso</li>
+          <li><i class="fas fa-check"></i> Gestión de mundos y backups</li>
+          <li><i class="fas fa-check"></i> Soporte para mods (Nexus/manual)</li>
+        </ul>
+        <span class="gaming-price-tag">💬 Precio según configuración</span>
+      </div>
+
+      <div class="gaming-game-card reveal" style="transition-delay:.3s">
+        <div class="gaming-game-icon">🎮</div>
+        <h3 class="gaming-game-title">Otros juegos</h3>
+        <p class="gaming-game-desc">¿Tienes otro juego en mente? CS2, Rust, Terraria, ARK, Palworld y más. Consúltanos y evaluamos la viabilidad.</p>
+        <ul class="gaming-game-includes">
+          <li><i class="fas fa-check"></i> Análisis de requerimientos del servidor</li>
+          <li><i class="fas fa-check"></i> Instalación y configuración inicial</li>
+          <li><i class="fas fa-check"></i> Documentación de acceso para el cliente</li>
+          <li><i class="fas fa-check"></i> Soporte post-configuración incluido</li>
+        </ul>
+        <span class="gaming-price-tag">💬 Consulta por tu juego</span>
+      </div>
+
+    </div>
+
+    <div class="gaming-disclaimer reveal" style="transition-delay:.4s">
+      <div class="icon">⚠️</div>
+      <div>
+        <h4>Importante: el precio y lo entregado depende del juego</h4>
+        <p>Cada juego tiene requisitos distintos de CPU, RAM y almacenamiento. El costo del servidor de hosting mensual, la complejidad de configuración y lo que se incluye (mods, panel, backups, slots de jugadores) varía según el título. Te entregamos un presupuesto claro antes de comenzar. Oferta especial disponible por tiempo limitado — contáctanos para más detalles.</p>
       </div>
     </div>
   </section>
@@ -1434,8 +1880,7 @@
     <div class="pricing-grid">
 
     <div class="pricing-card reveal">
-      <div class="pricing-tag">✨ Más popular</div>
-      <div class="pricing-icon">💼</div>
+      <div class="pricing-tag">✨ Más popular</div>      <div class="pricing-icon">💼</div>
       <h3 class="pricing-title">Proyecto Completo</h3>
       <p class="pricing-desc">Recibe un presupuesto detallado que cubre desde el diseño hasta el deploy y el soporte
         post-lanzamiento.</p>
@@ -1467,6 +1912,42 @@
       </ul>
       <a href="#cta" class="btn-primary" style="display:inline-flex;align-items:center;gap:10px;">
         <i class="fas fa-paper-plane"></i> Solicitar cotización gratis
+      </a>
+    </div>
+
+    <div class="pricing-card reveal" style="transition-delay:.3s">
+      <div class="pricing-icon">🔍</div>
+      <h3 class="pricing-title">Consultoría Técnica</h3>
+      <p class="pricing-desc">Diagnóstico, optimización y auditoría de tu sistema actual. Ideal si ya tienes un proyecto en producción y quieres mejorarlo o asegurarlo.</p>
+      <ul class="pricing-features">
+        <li><i class="fas fa-check-circle"></i> Evaluación inicial gratuita sin compromiso</li>
+        <li><i class="fas fa-check-circle"></i> Testing y pruebas de rendimiento</li>
+        <li><i class="fas fa-check-circle"></i> Optimización de código y consultas SQL</li>
+        <li><i class="fas fa-check-circle"></i> Detección y corrección de errores básicos/intermedios</li>
+        <li><i class="fas fa-check-circle"></i> Análisis de ciberseguridad básico (OWASP)</li>
+        <li><i class="fas fa-check-circle"></i> Informe de hallazgos y recomendaciones</li>
+        <li><i class="fas fa-check-circle"></i> Precio según alcance del diagnóstico</li>
+      </ul>
+      <a href="#cta" class="btn-primary" style="display:inline-flex;align-items:center;gap:10px;">
+        <i class="fas fa-paper-plane"></i> Solicitar evaluación gratis
+      </a>
+    </div>
+
+    <div class="pricing-card reveal" style="transition-delay:.45s; background: linear-gradient(135deg, rgba(255,197,51,0.12), rgba(255,90,40,0.08)); border-color: rgba(255,197,51,0.35);">
+      <div class="pricing-tag" style="background: linear-gradient(135deg,#ffc533,#ff5a28);color:#1a0f00;">⚡ Oferta especial</div>
+      <div class="pricing-icon">🎮</div>
+      <h3 class="pricing-title">Servidor de Juego</h3>
+      <p class="pricing-desc">Configuramos y dejamos listo tu servidor de juegos. El precio y lo que incluye varía según el juego — contáctanos y te armamos el paquete exacto que necesitas.</p>
+      <ul class="pricing-features">
+        <li><i class="fas fa-check-circle" style="color:#ffc533"></i> Cotización gratuita según tu juego</li>
+        <li><i class="fas fa-check-circle" style="color:#ffc533"></i> Instalación y configuración completa</li>
+        <li><i class="fas fa-check-circle" style="color:#ffc533"></i> Mods, plugins o mapas a tu elección</li>
+        <li><i class="fas fa-check-circle" style="color:#ffc533"></i> Acceso y documentación para el cliente</li>
+        <li><i class="fas fa-check-circle" style="color:#ffc533"></i> Soporte post-configuración incluido</li>
+        <li><i class="fas fa-check-circle" style="color:#ffc533"></i> Precio ajustado al juego y configuración</li>
+      </ul>
+      <a href="#cta" class="btn-primary" style="display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#ffc533,#ff5a28);">
+        <i class="fas fa-gamepad"></i> Consultar disponibilidad
       </a>
     </div>
 
