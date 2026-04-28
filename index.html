@@ -1109,6 +1109,22 @@
     }
 
     /* ─────────── FOOTER ─────────── */
+    .footer-gaming-link {
+      display: flex; align-items: center; justify-content: center;
+      margin: 24px auto 0; padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .footer-gaming-link a {
+      display: inline-flex; align-items: center; gap: 14px;
+      padding: 10px 26px; border-radius: 50px;
+      border: 1.5px solid rgba(255,197,51,0.22);
+      background: rgba(255,197,51,0.04);
+      color: var(--muted); font-size: 0.875rem; font-weight: 600;
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+    }
+    .footer-gaming-link a:hover { border-color: rgba(255,197,51,0.55); color: #ffc533; background: rgba(255,197,51,0.08); }
+    .footer-gaming-logo-img { height: 30px; opacity: 0.82; filter: drop-shadow(0 0 8px rgba(255,197,51,0.35)); }
+
     footer {
       position: relative;
       z-index: 1;
@@ -1326,20 +1342,42 @@
       line-height: 1.6;
     }
 
-    /* ─────────── GAMING HOSTING ─────────── */
-    #gaming {
-      background: var(--dark2);
+    /* ─────────── GAMING PROMO ─────────── */
+    #gaming-promo {
+      background: linear-gradient(160deg, rgba(12,10,4,1) 0%, rgba(22,16,2,1) 100%);
+      border-top: 1px solid rgba(255,197,51,0.1);
+      border-bottom: 1px solid rgba(255,197,51,0.1);
     }
 
-    .gaming-offer-badge {
+    .gaming-promo-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 64px;
+      max-width: 1100px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    .gaming-promo-logo {
+      width: clamp(200px, 28vw, 320px);
+      filter: drop-shadow(0 0 32px rgba(255,197,51,0.5));
+      flex-shrink: 0;
+    }
+
+    .gaming-promo-text {
+      max-width: 460px;
+    }
+
+    .gaming-offer-tag {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 8px 20px;
-      background: linear-gradient(135deg, rgba(255, 170, 30, 0.18), rgba(255, 90, 40, 0.12));
-      border: 1px solid rgba(255, 170, 30, 0.4);
+      padding: 7px 18px;
+      background: rgba(255,197,51,0.12);
+      border: 1px solid rgba(255,197,51,0.35);
       border-radius: 50px;
-      font-size: 0.78rem;
+      font-size: 0.75rem;
       font-weight: 700;
       color: #ffc533;
       letter-spacing: 1px;
@@ -1347,130 +1385,47 @@
       margin-bottom: 18px;
     }
 
-    .gaming-offer-badge i {
-      color: #ffc533;
-    }
-
-    .gaming-games-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 22px;
-      margin-bottom: 48px;
-    }
-
-    .gaming-game-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 28px 24px;
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
-      cursor: default;
-    }
-
-    .gaming-game-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background: linear-gradient(90deg, #ffc533, #ff5a28);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.4s;
-    }
-
-    .gaming-game-card:hover {
-      transform: translateY(-7px);
-      border-color: rgba(255, 197, 51, 0.4);
-      box-shadow: 0 8px 40px rgba(255, 170, 30, 0.2);
-    }
-
-    .gaming-game-card:hover::before {
-      transform: scaleX(1);
-    }
-
-    .gaming-game-icon {
-      font-size: 2.4rem;
-      margin-bottom: 14px;
-    }
-
-    .gaming-game-title {
+    .gaming-promo-text h2 {
       font-family: var(--heading);
-      font-size: 1.05rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .gaming-game-desc {
-      color: var(--muted);
-      font-size: 0.85rem;
-      line-height: 1.6;
+      font-size: clamp(1.7rem, 3.5vw, 2.6rem);
+      font-weight: 800;
       margin-bottom: 14px;
+      line-height: 1.15;
     }
 
-    .gaming-game-includes {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 7px;
-      margin-bottom: 16px;
+    .gaming-promo-text h2 .gold {
+      background: linear-gradient(135deg, #ffc533, #ff5a28);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
-    .gaming-game-includes li {
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-      font-size: 0.82rem;
+    .gaming-promo-text p {
       color: var(--muted);
-    }
-
-    .gaming-game-includes li i {
-      color: #ffc533;
-      flex-shrink: 0;
-      margin-top: 3px;
-    }
-
-    .gaming-price-tag {
-      display: inline-block;
-      padding: 5px 14px;
-      border-radius: 50px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      background: linear-gradient(135deg, rgba(255, 197, 51, 0.15), rgba(255, 90, 40, 0.1));
-      color: #ffc533;
-      border: 1px solid rgba(255, 197, 51, 0.3);
-    }
-
-    .gaming-disclaimer {
-      background: linear-gradient(135deg, rgba(255, 170, 30, 0.07), rgba(255, 90, 40, 0.05));
-      border: 1px solid rgba(255, 170, 30, 0.18);
-      border-radius: var(--radius);
-      padding: 22px 28px;
-      display: flex;
-      align-items: center;
-      gap: 18px;
-    }
-
-    .gaming-disclaimer .icon {
-      font-size: 2rem;
-      flex-shrink: 0;
-    }
-
-    .gaming-disclaimer h4 {
-      font-family: var(--heading);
+      line-height: 1.7;
+      margin-bottom: 28px;
       font-size: 0.95rem;
-      font-weight: 700;
-      margin-bottom: 4px;
-      color: #ffc533;
     }
 
-    .gaming-disclaimer p {
-      color: var(--muted);
-      font-size: 0.83rem;
-      line-height: 1.6;
+    .btn-gaming {
+      padding: 14px 30px;
+      background: linear-gradient(135deg, #ffc533, #ff5a28);
+      border: none;
+      border-radius: 50px;
+      color: #0a0a06;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.3s;
+    }
+
+    .btn-gaming:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(255,197,51,0.42);
     }
 
     /* ─────────── KEYFRAMES GLOBALS ─────────── */
@@ -1569,7 +1524,6 @@
     <ul class="nav-links">
       <li><a href="#services">Servicios</a></li>
       <li><a href="#consulting">Consultoría</a></li>
-      <li><a href="#gaming">Gaming</a></li>
       <li><a href="#pricing">Cotización</a></li>
       <li><a href="#tech">Tecnologías</a></li>
       <li><a href="#team">Equipo</a></li>
@@ -1693,13 +1647,7 @@
         <a href="#consulting" class="service-badge badge-purple" style="text-decoration:none;cursor:pointer;">Ver detalles →</a>
       </div>
 
-      <div class="service-card reveal" style="transition-delay:.7s">
-        <div class="service-icon" style="background:linear-gradient(135deg,#ffc533,#ff5a28)"><i
-            class="fas fa-gamepad"></i></div>
-        <h3 class="service-title">Hosting & Servidores de Juegos</h3>
-        <p class="service-desc">Configuración y hosting de servidores de juegos a medida. Lo que se entrega y el costo varía según el juego. ¡Disponible como oferta especial por tiempo limitado!</p>
-        <a href="#gaming" class="service-badge" style="background:rgba(255,197,51,0.12);color:#ffc533;border:1px solid rgba(255,197,51,0.3);text-decoration:none;cursor:pointer;">Ver juegos →</a>
-      </div>
+
 
     </div>
 
@@ -1794,79 +1742,8 @@
     </div>
   </section>
 
-  <!-- GAMING HOSTING -->
-  <section id="gaming">
-    <div class="section-header reveal">
-      <div class="gaming-offer-badge"><i class="fas fa-bolt"></i> Oferta especial por tiempo limitado</div>
-      <span class="section-label">Hosting & Servidores de Juegos</span>
-      <h2 class="section-title">Tu propio servidor gamer,<br>configurado y listo para jugar</h2>
-      <p class="section-sub">Montamos y configuramos servidores de juegos según el título que elijas. El precio y lo que incluye varía según el juego — consúltanos y te armamos un paquete a tu medida.</p>
-    </div>
-
-    <div class="gaming-games-grid">
-
-      <div class="gaming-game-card reveal" style="transition-delay:.0s">
-        <div class="gaming-game-icon">⛏️</div>
-        <h3 class="gaming-game-title">Minecraft (Java / Bedrock)</h3>
-        <p class="gaming-game-desc">Servidor dedicado con mods, plugins y mundos personalizados según lo que necesite tu comunidad.</p>
-        <ul class="gaming-game-includes">
-          <li><i class="fas fa-check"></i> Instalación y configuración completa del servidor</li>
-          <li><i class="fas fa-check"></i> Instalación de mods o plugins a elección</li>
-          <li><i class="fas fa-check"></i> Panel de administración web (si aplica)</li>
-          <li><i class="fas fa-check"></i> Backups automáticos configurados</li>
-        </ul>
-        <span class="gaming-price-tag">💬 Precio según configuración</span>
-      </div>
-
-      <div class="gaming-game-card reveal" style="transition-delay:.1s">
-        <div class="gaming-game-icon">🧟</div>
-        <h3 class="gaming-game-title">Project Zomboid</h3>
-        <p class="gaming-game-desc">Servidor persistente con configuración de dificultad, mods de Steam Workshop y gestión de usuarios.</p>
-        <ul class="gaming-game-includes">
-          <li><i class="fas fa-check"></i> Servidor dedicado con Steam CMD</li>
-          <li><i class="fas fa-check"></i> Configuración de mods vía Workshop</li>
-          <li><i class="fas fa-check"></i> Ajuste de parámetros del mundo y dificultad</li>
-          <li><i class="fas fa-check"></i> Whitelist / control de acceso</li>
-        </ul>
-        <span class="gaming-price-tag">💬 Precio según configuración</span>
-      </div>
-
-      <div class="gaming-game-card reveal" style="transition-delay:.2s">
-        <div class="gaming-game-icon">🌴</div>
-        <h3 class="gaming-game-title">Valheim</h3>
-        <p class="gaming-game-desc">Mundo persistente siempre disponible para tu grupo, con backups del mundo y fácil gestión de accesos.</p>
-        <ul class="gaming-game-includes">
-          <li><i class="fas fa-check"></i> Servidor dedicado con SteamCMD</li>
-          <li><i class="fas fa-check"></i> Contraseña y control de acceso</li>
-          <li><i class="fas fa-check"></i> Gestión de mundos y backups</li>
-          <li><i class="fas fa-check"></i> Soporte para mods (Nexus/manual)</li>
-        </ul>
-        <span class="gaming-price-tag">💬 Precio según configuración</span>
-      </div>
-
-      <div class="gaming-game-card reveal" style="transition-delay:.3s">
-        <div class="gaming-game-icon">🎮</div>
-        <h3 class="gaming-game-title">Otros juegos</h3>
-        <p class="gaming-game-desc">¿Tienes otro juego en mente? CS2, Rust, Terraria, ARK, Palworld y más. Consúltanos y evaluamos la viabilidad.</p>
-        <ul class="gaming-game-includes">
-          <li><i class="fas fa-check"></i> Análisis de requerimientos del servidor</li>
-          <li><i class="fas fa-check"></i> Instalación y configuración inicial</li>
-          <li><i class="fas fa-check"></i> Documentación de acceso para el cliente</li>
-          <li><i class="fas fa-check"></i> Soporte post-configuración incluido</li>
-        </ul>
-        <span class="gaming-price-tag">💬 Consulta por tu juego</span>
-      </div>
-
-    </div>
-
-    <div class="gaming-disclaimer reveal" style="transition-delay:.4s">
-      <div class="icon">⚠️</div>
-      <div>
-        <h4>Importante: el precio y lo entregado depende del juego</h4>
-        <p>Cada juego tiene requisitos distintos de CPU, RAM y almacenamiento. El costo del servidor de hosting mensual, la complejidad de configuración y lo que se incluye (mods, panel, backups, slots de jugadores) varía según el título. Te entregamos un presupuesto claro antes de comenzar. Oferta especial disponible por tiempo limitado — contáctanos para más detalles.</p>
-      </div>
-    </div>
-  </section>
+  <!-- GAMING PROMO -->
+ 
 
   <!-- PRICING -->
   <section id="pricing">
@@ -1933,23 +1810,7 @@
       </a>
     </div>
 
-    <div class="pricing-card reveal" style="transition-delay:.45s; background: linear-gradient(135deg, rgba(255,197,51,0.12), rgba(255,90,40,0.08)); border-color: rgba(255,197,51,0.35);">
-      <div class="pricing-tag" style="background: linear-gradient(135deg,#ffc533,#ff5a28);color:#1a0f00;">⚡ Oferta especial</div>
-      <div class="pricing-icon">🎮</div>
-      <h3 class="pricing-title">Servidor de Juego</h3>
-      <p class="pricing-desc">Configuramos y dejamos listo tu servidor de juegos. El precio y lo que incluye varía según el juego — contáctanos y te armamos el paquete exacto que necesitas.</p>
-      <ul class="pricing-features">
-        <li><i class="fas fa-check-circle" style="color:#ffc533"></i> Cotización gratuita según tu juego</li>
-        <li><i class="fas fa-check-circle" style="color:#ffc533"></i> Instalación y configuración completa</li>
-        <li><i class="fas fa-check-circle" style="color:#ffc533"></i> Mods, plugins o mapas a tu elección</li>
-        <li><i class="fas fa-check-circle" style="color:#ffc533"></i> Acceso y documentación para el cliente</li>
-        <li><i class="fas fa-check-circle" style="color:#ffc533"></i> Soporte post-configuración incluido</li>
-        <li><i class="fas fa-check-circle" style="color:#ffc533"></i> Precio ajustado al juego y configuración</li>
-      </ul>
-      <a href="#cta" class="btn-primary" style="display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#ffc533,#ff5a28);">
-        <i class="fas fa-gamepad"></i> Consultar disponibilidad
-      </a>
-    </div>
+
 
     </div><!-- /pricing-grid -->
   </section>
@@ -2144,6 +2005,12 @@
       <a href="#" class="footer-social" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
       <a href="#" class="footer-social" title="Instagram"><i class="fab fa-instagram"></i></a>
       <a href="#" class="footer-social" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <div class="footer-gaming-link">
+      <a href="gaming.html">
+        <img src="assets/MIVTIGaming.svg" alt="MIVTI Gaming" class="footer-gaming-logo-img">
+        Visitar MIVTI Gaming <i class="fas fa-arrow-right" style="font-size:0.75rem;"></i>
+      </a>
     </div>
     <div class="footer-bottom">© 2026 MIVTI — Todos los derechos reservados.</div>
   </footer>
